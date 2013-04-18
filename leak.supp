@@ -1,0 +1,44 @@
+### glib suppressions
+
+{
+   <glib1>
+   Memcheck:Leak
+   ...
+   fun:call_init
+}
+
+{
+   <glib2>
+   Memcheck:Leak
+   ...
+   fun:test_getters_*
+}
+
+{
+   <glib7>
+   Memcheck:Leak
+   ...
+   fun:test_builder
+}
+
+{
+   <glib3>
+   Memcheck:Leak
+   ...
+   fun:g_test_init
+}
+
+
+{
+   <glib5>
+   Memcheck:Leak
+   ...
+   fun:g_test_add_vtable
+}
+
+{
+   <glib4>
+   Memcheck:Leak
+   ...
+   fun:g_print
+}

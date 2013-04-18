@@ -1,0 +1,6047 @@
+{
+  "alternateClassNames": [
+    "Ext.BoundList"
+  ],
+  "aliases": {
+    "widget": [
+      "boundlist"
+    ]
+  },
+  "enum": null,
+  "parentMixins": [
+    "Ext.state.Stateful",
+    "Ext.util.Animate",
+    "Ext.util.Bindable",
+    "Ext.util.ElementContainer",
+    "Ext.util.Floating",
+    "Ext.util.Observable",
+    "Ext.util.Positionable",
+    "Ext.util.Renderable"
+  ],
+  "tagname": "class",
+  "subclasses": [
+    "Ext.picker.Time"
+  ],
+  "extends": "Ext.view.View",
+  "uses": [
+    
+  ],
+  "superclasses": [
+    "Ext.Base",
+    "Ext.AbstractComponent",
+    "Ext.Component",
+    "Ext.view.AbstractView",
+    "Ext.view.View"
+  ],
+  "meta": {
+    
+  },
+  "code_type": "ext_define",
+  "requires": [
+    "Ext.layout.component.BoundList",
+    "Ext.toolbar.Paging"
+  ],
+  "html_meta": {
+    
+  },
+  "statics": {
+    "property": [
+      {
+        "tagname": "property",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "private": true
+        },
+        "name": "$onExtended",
+        "id": "static-property-S-onExtended"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.View",
+        "meta": {
+          "static": true,
+          "private": true
+        },
+        "name": "EventMap",
+        "id": "property-EventMap"
+      }
+    ],
+    "cfg": [
+      
+    ],
+    "css_var": [
+      
+    ],
+    "method": [
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "private": true
+        },
+        "name": "addConfig",
+        "id": "static-method-addConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true,
+          "private": true
+        },
+        "name": "addInheritableStatics",
+        "id": "static-method-addInheritableStatics"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true,
+          "private": true
+        },
+        "name": "addMember",
+        "id": "static-method-addMember"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true
+        },
+        "name": "addMembers",
+        "id": "static-method-addMembers"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true
+        },
+        "name": "addStatics",
+        "id": "static-method-addStatics"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true,
+          "private": true
+        },
+        "name": "addXtype",
+        "id": "static-method-addXtype"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true,
+          "private": true
+        },
+        "name": "borrow",
+        "id": "static-method-borrow"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true
+        },
+        "name": "create",
+        "id": "static-method-create"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true
+        },
+        "name": "createAlias",
+        "id": "static-method-createAlias"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "private": true
+        },
+        "name": "extend",
+        "id": "static-method-extend"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "static": true,
+          "private": true
+        },
+        "name": "getBoundView",
+        "id": "method-getBoundView"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true
+        },
+        "name": "getName",
+        "id": "static-method-getName"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "deprecated": {
+            "text": "Use {@link #addMembers} instead.",
+            "version": "4.1"
+          }
+        },
+        "name": "implement",
+        "id": "static-method-implement"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "private": true
+        },
+        "name": "mixin",
+        "id": "static-method-mixin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true,
+          "private": true
+        },
+        "name": "onExtended",
+        "id": "static-method-onExtended"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "chainable": true,
+          "markdown": true,
+          "deprecated": {
+            "text": "Use {@link Ext#define Ext.define} instead",
+            "version": "4.1.0"
+          }
+        },
+        "name": "override",
+        "id": "static-method-override"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "static": true,
+          "private": true
+        },
+        "name": "triggerExtended",
+        "id": "static-method-triggerExtended"
+      }
+    ],
+    "event": [
+      
+    ],
+    "css_mixin": [
+      
+    ]
+  },
+  "files": [
+    {
+      "href": "BoundList2.html#Ext-view-BoundList",
+      "filename": "BoundList.js"
+    },
+    {
+      "href": "BoundList.scss3.html#Ext-view-BoundList",
+      "filename": "BoundList.scss"
+    }
+  ],
+  "linenr": 1,
+  "members": {
+    "property": [
+      {
+        "tagname": "property",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "$className",
+        "id": "property-S-className"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "private": true
+        },
+        "name": "_alignRe",
+        "id": "property-_alignRe"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true
+        },
+        "name": "_isLayoutRoot",
+        "id": "property-_isLayoutRoot"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "private": true
+        },
+        "name": "_positionTopLeft",
+        "id": "property-_positionTopLeft"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "allowDomMove",
+        "id": "property-allowDomMove"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "autoGenId",
+        "id": "property-autoGenId"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "bubbleEvents",
+        "id": "property-bubbleEvents"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "childEls",
+        "id": "property-childEls"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "componentLayoutCounter",
+        "id": "property-componentLayoutCounter"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "configMap",
+        "id": "property-configMap"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "contentPaddingProperty",
+        "id": "property-contentPaddingProperty"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "private": true
+        },
+        "name": "convertPositionSpec",
+        "id": "property-convertPositionSpec"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "defaultComponentLayoutType",
+        "id": "property-defaultComponentLayoutType"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "deferHighlight",
+        "id": "property-deferHighlight"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "deferLayouts",
+        "id": "property-deferLayouts"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "readonly": true
+        },
+        "name": "draggable",
+        "id": "property-draggable"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          "private": true
+        },
+        "name": "eventsSuspended",
+        "id": "property-eventsSuspended"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Component",
+        "meta": {
+          "readonly": true
+        },
+        "name": "floatParent",
+        "id": "property-floatParent"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "frameCls",
+        "id": "property-frameCls"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "frameElNames",
+        "id": "property-frameElNames"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "frameElementsArray",
+        "id": "property-frameElementsArray"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "frameIdRegex",
+        "id": "property-frameIdRegex"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "frameInfoCache",
+        "id": "property-frameInfoCache"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "frameInfoRe",
+        "id": "property-frameInfoRe"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "readonly": true
+        },
+        "name": "frameSize",
+        "id": "property-frameSize"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "frameTableTpl",
+        "id": "property-frameTableTpl"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "frameTpl",
+        "id": "property-frameTpl"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          "readonly": true
+        },
+        "name": "hasListeners",
+        "id": "property-hasListeners"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "horizontalPosProp",
+        "id": "property-horizontalPosProp"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "initConfigList",
+        "id": "property-initConfigList"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "initConfigMap",
+        "id": "property-initConfigMap"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "inputTagRe",
+        "id": "property-inputTagRe"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          "private": true
+        },
+        "name": "isAnimate",
+        "id": "property-isAnimate"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isComponent",
+        "id": "property-isComponent"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "isInstance",
+        "id": "property-isInstance"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "isObservable",
+        "id": "property-isObservable"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "last",
+        "id": "property-last"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "layoutSuspendCount",
+        "id": "property-layoutSuspendCount"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "listItemCls",
+        "id": "property-listItemCls"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "maskOnDisable",
+        "id": "property-maskOnDisable"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "offsetsCls",
+        "id": "property-offsetsCls"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2",
+          "readonly": true
+        },
+        "name": "ownerCt",
+        "id": "property-ownerCt"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "pagingToolbar",
+        "id": "property-pagingToolbar"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "refreshed",
+        "id": "property-refreshed"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1",
+          "readonly": true
+        },
+        "name": "rendered",
+        "id": "property-rendered"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Component",
+        "meta": {
+          "readonly": true
+        },
+        "name": "scrollFlags",
+        "id": "property-scrollFlags"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Base",
+        "meta": {
+          "protected": true
+        },
+        "name": "self",
+        "id": "property-self"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "triggerCtEvent",
+        "id": "property-triggerCtEvent"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "triggerEvent",
+        "id": "property-triggerEvent"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "weight",
+        "id": "property-weight"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Component",
+        "meta": {
+          "readonly": true
+        },
+        "name": "zIndexManager",
+        "id": "property-zIndexManager"
+      },
+      {
+        "tagname": "property",
+        "owner": "Ext.Component",
+        "meta": {
+          "readonly": true
+        },
+        "name": "zIndexParent",
+        "id": "property-zIndexParent"
+      }
+    ],
+    "cfg": [
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "autoEl",
+        "id": "cfg-autoEl"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "deprecated": {
+            "text": "Use {@link #loader} config instead.",
+            "version": "4.1.1"
+          }
+        },
+        "name": "autoLoad",
+        "id": "cfg-autoLoad"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "autoRender",
+        "id": "cfg-autoRender"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "autoScroll",
+        "id": "cfg-autoScroll"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "autoShow",
+        "id": "cfg-autoShow"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "baseCls",
+        "id": "cfg-baseCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "blockRefresh",
+        "id": "cfg-blockRefresh"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "border",
+        "id": "cfg-border"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "childEls",
+        "id": "cfg-childEls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "cls",
+        "id": "cfg-cls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "columnWidth",
+        "id": "cfg-columnWidth"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "componentCls",
+        "id": "cfg-componentCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "componentLayout",
+        "id": "cfg-componentLayout"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "constrain",
+        "id": "cfg-constrain"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "constrainTo",
+        "id": "cfg-constrainTo"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "constraintInsets",
+        "id": "cfg-constraintInsets"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "contentEl",
+        "id": "cfg-contentEl"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "data",
+        "id": "cfg-data"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "defaultAlign",
+        "id": "cfg-defaultAlign"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "deferEmptyText",
+        "id": "cfg-deferEmptyText"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "deferInitialRefresh",
+        "id": "cfg-deferInitialRefresh"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "disableSelection",
+        "id": "cfg-disableSelection"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "disabled",
+        "id": "cfg-disabled"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "disabledCls",
+        "id": "cfg-disabledCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "displayField",
+        "id": "cfg-displayField"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "draggable",
+        "id": "cfg-draggable"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "emptyText",
+        "id": "cfg-emptyText"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "fixed",
+        "id": "cfg-fixed"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "floating",
+        "id": "cfg-floating"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "focusOnToFront",
+        "id": "cfg-focusOnToFront"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "formBind",
+        "id": "cfg-formBind"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "frame",
+        "id": "cfg-frame"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "height",
+        "id": "cfg-height"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "hidden",
+        "id": "cfg-hidden"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "hideMode",
+        "id": "cfg-hideMode"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "html",
+        "id": "cfg-html"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "id",
+        "id": "cfg-id"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "itemCls",
+        "id": "cfg-itemCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "itemId",
+        "id": "cfg-itemId"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "required": true,
+          "since": "Ext 2"
+        },
+        "name": "itemSelector",
+        "id": "cfg-itemSelector"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "itemTpl",
+        "id": "cfg-itemTpl"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "listeners",
+        "id": "cfg-listeners"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "loadMask",
+        "id": "cfg-loadMask"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "loader",
+        "id": "cfg-loader"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "loadingCls",
+        "id": "cfg-loadingCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "loadingHeight",
+        "id": "cfg-loadingHeight"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "loadingText",
+        "id": "cfg-loadingText"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "loadingUseMsg",
+        "id": "cfg-loadingUseMsg"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "margin",
+        "id": "cfg-margin"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "maxHeight",
+        "id": "cfg-maxHeight"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "maxWidth",
+        "id": "cfg-maxWidth"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "minHeight",
+        "id": "cfg-minHeight"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "minWidth",
+        "id": "cfg-minWidth"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "mouseOverOutBuffer",
+        "id": "cfg-mouseOverOutBuffer"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2",
+          "deprecated": {
+            "text": "Use {@link Ext.selection.Model#mode} 'MULTI' instead.",
+            "version": "4.0"
+          }
+        },
+        "name": "multiSelect",
+        "id": "cfg-multiSelect"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "overCls",
+        "id": "cfg-overCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "overItemCls",
+        "id": "cfg-overItemCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "overflowX",
+        "id": "cfg-overflowX"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "overflowY",
+        "id": "cfg-overflowY"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "padding",
+        "id": "cfg-padding"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "pageSize",
+        "id": "cfg-pageSize"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "plugins",
+        "id": "cfg-plugins"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "preserveScrollOnRefresh",
+        "id": "cfg-preserveScrollOnRefresh"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "region",
+        "id": "cfg-region"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "renderData",
+        "id": "cfg-renderData"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "renderSelectors",
+        "id": "cfg-renderSelectors"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "renderTo",
+        "id": "cfg-renderTo"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "protected": true
+        },
+        "name": "renderTpl",
+        "id": "cfg-renderTpl"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "resizable",
+        "id": "cfg-resizable"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "resizeHandles",
+        "id": "cfg-resizeHandles"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "rtl",
+        "id": "cfg-rtl"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "saveDelay",
+        "id": "cfg-saveDelay"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "selectedItemCls",
+        "id": "cfg-selectedItemCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "shadow",
+        "id": "cfg-shadow"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "shadowOffset",
+        "id": "cfg-shadowOffset"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "shrinkWrap",
+        "id": "cfg-shrinkWrap"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2",
+          "deprecated": {
+            "text": "Use {@link Ext.selection.Model#mode} 'SIMPLE' instead.",
+            "version": "4.0"
+          }
+        },
+        "name": "simpleSelect",
+        "id": "cfg-simpleSelect"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2",
+          "removed": {
+            "text": "Use {@link Ext.selection.Model#mode} 'SINGLE' instead.",
+            "version": "4.0"
+          }
+        },
+        "name": "singleSelect",
+        "id": "cfg-singleSelect"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "stateEvents",
+        "id": "cfg-stateEvents"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "stateId",
+        "id": "cfg-stateId"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "stateful",
+        "id": "cfg-stateful"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "required": true,
+          "since": "Ext 2"
+        },
+        "name": "store",
+        "id": "cfg-store"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "style",
+        "id": "cfg-style"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "toFrontOnShow",
+        "id": "cfg-toFrontOnShow"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "tpl",
+        "id": "cfg-tpl"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "tplWriteMode",
+        "id": "cfg-tplWriteMode"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "trackOver",
+        "id": "cfg-trackOver"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "ui",
+        "id": "cfg-ui"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "uiCls",
+        "id": "cfg-uiCls"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "width",
+        "id": "cfg-width"
+      },
+      {
+        "tagname": "cfg",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "xtype",
+        "id": "cfg-xtype"
+      }
+    ],
+    "css_var": [
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-background-color",
+        "id": "css_var-S-boundlist-background-color"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-border-color",
+        "id": "css_var-S-boundlist-border-color"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-border-style",
+        "id": "css_var-S-boundlist-border-style"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-border-width",
+        "id": "css_var-S-boundlist-border-width"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-border-color",
+        "id": "css_var-S-boundlist-item-border-color"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-border-style",
+        "id": "css_var-S-boundlist-item-border-style"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-border-width",
+        "id": "css_var-S-boundlist-item-border-width"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-height",
+        "id": "css_var-S-boundlist-item-height"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-over-background-color",
+        "id": "css_var-S-boundlist-item-over-background-color"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-over-border-color",
+        "id": "css_var-S-boundlist-item-over-border-color"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-padding",
+        "id": "css_var-S-boundlist-item-padding"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-selected-background-color",
+        "id": "css_var-S-boundlist-item-selected-background-color"
+      },
+      {
+        "tagname": "css_var",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "$boundlist-item-selected-border-color",
+        "id": "css_var-S-boundlist-item-selected-border-color"
+      }
+    ],
+    "method": [
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "constructor",
+        "id": "method-constructor"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.ElementContainer",
+        "meta": {
+          
+        },
+        "name": "addChildEls",
+        "id": "method-addChildEls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2",
+          "deprecated": {
+            "text": "Use {@link #addCls} instead.",
+            "version": "4.1"
+          }
+        },
+        "name": "addClass",
+        "id": "method-addClass"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "addCls",
+        "id": "method-addCls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "addClsWithUI",
+        "id": "method-addClsWithUI"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "addCmpEvents",
+        "id": "method-addCmpEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "addEvents",
+        "id": "method-addEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "addFocusListener",
+        "id": "method-addFocusListener"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "addListener",
+        "id": "method-addListener"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "addManagedListener",
+        "id": "method-addManagedListener"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "addOverCls",
+        "id": "method-addOverCls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "addPlugin",
+        "id": "method-addPlugin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true
+        },
+        "name": "addPropertyToState",
+        "id": "method-addPropertyToState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "addStateEvents",
+        "id": "method-addStateEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "addUIClsToElement",
+        "id": "method-addUIClsToElement"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "addUIToElement",
+        "id": "method-addUIToElement"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "private": true
+        },
+        "name": "adjustForConstraints",
+        "id": "method-adjustForConstraints"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "adjustPosition",
+        "id": "method-adjustPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "template": true,
+          "protected": true
+        },
+        "name": "afterComponentLayout",
+        "id": "method-afterComponentLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "afterFirstLayout",
+        "id": "method-afterFirstLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "afterHide",
+        "id": "method-afterHide"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "template": true,
+          "protected": true,
+          "private": true
+        },
+        "name": "afterRender",
+        "id": "method-afterRender"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "template": true,
+          "protected": true
+        },
+        "name": "afterSetPosition",
+        "id": "method-afterSetPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "afterShow",
+        "id": "method-afterShow"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "chainable": true
+        },
+        "name": "alignTo",
+        "id": "method-alignTo"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "chainable": true
+        },
+        "name": "anchorTo",
+        "id": "method-anchorTo"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          "private": true
+        },
+        "name": "anim",
+        "id": "method-anim"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "animate",
+        "id": "method-animate"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.ElementContainer",
+        "meta": {
+          "private": true
+        },
+        "name": "applyChildEls",
+        "id": "method-applyChildEls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "applyFirstRefresh",
+        "id": "method-applyFirstRefresh"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "applyRenderSelectors",
+        "id": "method-applyRenderSelectors"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "applyState",
+        "id": "method-applyState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true
+        },
+        "name": "beforeBlur",
+        "id": "method-beforeBlur"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "beforeComponentLayout",
+        "id": "method-beforeComponentLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "beforeDestroy",
+        "id": "method-beforeDestroy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true
+        },
+        "name": "beforeFocus",
+        "id": "method-beforeFocus"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "beforeLayout",
+        "id": "method-beforeLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "beforeRender",
+        "id": "method-beforeRender"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "beforeSetPosition",
+        "id": "method-beforeSetPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "beforeShow",
+        "id": "method-beforeShow"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "bindStore",
+        "id": "method-bindStore"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Bindable",
+        "meta": {
+          "protected": true
+        },
+        "name": "bindStoreListeners",
+        "id": "method-bindStoreListeners"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true,
+          "private": true
+        },
+        "name": "blur",
+        "id": "method-blur"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "bubble",
+        "id": "method-bubble"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "bufferRender",
+        "id": "method-bufferRender"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "private": true
+        },
+        "name": "calculateAnchorXY",
+        "id": "method-calculateAnchorXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "calculateConstrainedPosition",
+        "id": "method-calculateConstrainedPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "protected": true,
+          "deprecated": {
+            "text": "as of 4.1. Use {@link #callParent} instead."
+          }
+        },
+        "name": "callOverridden",
+        "id": "method-callOverridden"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "protected": true
+        },
+        "name": "callParent",
+        "id": "method-callParent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "protected": true
+        },
+        "name": "callSuper",
+        "id": "method-callSuper"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true
+        },
+        "name": "cancelFocus",
+        "id": "method-cancelFocus"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "center",
+        "id": "method-center"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "clearHighlight",
+        "id": "method-clearHighlight"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "clearListeners",
+        "id": "method-clearListeners"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "clearManagedListeners",
+        "id": "method-clearManagedListeners"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2",
+          "deprecated": {
+            "text": "Use {@link Ext.selection.Model#deselectAll} instead.",
+            "version": "4.0"
+          }
+        },
+        "name": "clearSelections",
+        "id": "method-clearSelections"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "clearViewEl",
+        "id": "method-clearViewEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "cloneConfig",
+        "id": "method-cloneConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "collectData",
+        "id": "method-collectData"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "collectNodes",
+        "id": "method-collectNodes"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "configClass",
+        "id": "method-configClass"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "constructPlugin",
+        "id": "method-constructPlugin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "constructPlugins",
+        "id": "method-constructPlugins"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          "private": true
+        },
+        "name": "continueFireEvent",
+        "id": "method-continueFireEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "convertPositionSpec",
+        "id": "method-convertPositionSpec"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "createPagingToolbar",
+        "id": "method-createPagingToolbar"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          "private": true
+        },
+        "name": "createRelayer",
+        "id": "method-createRelayer"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "deleteMembers",
+        "id": "method-deleteMembers"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "deselect",
+        "id": "method-deselect"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "destroy",
+        "id": "method-destroy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "disable",
+        "id": "method-disable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "doAdd",
+        "id": "method-doAdd"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "doApplyRenderTpl",
+        "id": "method-doApplyRenderTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          
+        },
+        "name": "doAutoRender",
+        "id": "method-doAutoRender"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "chainable": true
+        },
+        "name": "doComponentLayout",
+        "id": "method-doComponentLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "doConstrain",
+        "id": "method-doConstrain"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "doFirstRefresh",
+        "id": "method-doFirstRefresh"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "doRemove",
+        "id": "method-doRemove"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "doRenderContent",
+        "id": "method-doRenderContent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "doRenderFramingDockedItems",
+        "id": "method-doRenderFramingDockedItems"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "enable",
+        "id": "method-enable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "enableBubble",
+        "id": "method-enableBubble"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          
+        },
+        "name": "ensureAttachedToBody",
+        "id": "method-ensureAttachedToBody"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "findItemByChild",
+        "id": "method-findItemByChild"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "findParentBy",
+        "id": "method-findParentBy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "findParentByType",
+        "id": "method-findParentByType"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "findPlugin",
+        "id": "method-findPlugin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "findTargetByEvent",
+        "id": "method-findTargetByEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "finishRender",
+        "id": "method-finishRender"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "finishRenderChildren",
+        "id": "method-finishRenderChildren"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "fireEvent",
+        "id": "method-fireEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "fireEventArgs",
+        "id": "method-fireEventArgs"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "fireHierarchyEvent",
+        "id": "method-fireHierarchyEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "fitContainer",
+        "id": "method-fitContainer"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "focus",
+        "id": "method-focus"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "focusNode",
+        "id": "method-focusNode"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "deprecated": {
+            "text": "Use {@link #updateLayout} instead.",
+            "version": "4.1.0"
+          }
+        },
+        "name": "forceComponentLayout",
+        "id": "method-forceComponentLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getActionEl",
+        "id": "method-getActionEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          
+        },
+        "name": "getActiveAnimation",
+        "id": "method-getActiveAnimation"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "getAlignToXY",
+        "id": "method-getAlignToXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "private": true
+        },
+        "name": "getAnchor",
+        "id": "method-getAnchor"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getAnchorToXY",
+        "id": "method-getAnchorToXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "getAnchorXY",
+        "id": "method-getAnchorXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getAnimateTarget",
+        "id": "method-getAnimateTarget"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getAutoId",
+        "id": "method-getAutoId"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getBorderPadding",
+        "id": "method-getBorderPadding"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "getBox",
+        "id": "method-getBox"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          "private": true
+        },
+        "name": "getBubbleParent",
+        "id": "method-getBubbleParent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true
+        },
+        "name": "getBubbleTarget",
+        "id": "method-getBubbleTarget"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.ElementContainer",
+        "meta": {
+          "private": true
+        },
+        "name": "getChildEls",
+        "id": "method-getChildEls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.ElementContainer",
+        "meta": {
+          "private": true
+        },
+        "name": "getClassChildEls",
+        "id": "method-getClassChildEls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getComponentLayout",
+        "id": "method-getComponentLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "getConfig",
+        "id": "method-getConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "getConstrainVector",
+        "id": "method-getConstrainVector"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getContentTarget",
+        "id": "method-getContentTarget"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getDragEl",
+        "id": "method-getDragEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "getEl",
+        "id": "method-getEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "getElConfig",
+        "id": "method-getElConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "getFocusEl",
+        "id": "method-getFocusEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "getFrameInfo",
+        "id": "method-getFrameInfo"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "getFrameRenderData",
+        "id": "method-getFrameRenderData"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "getFrameTpl",
+        "id": "method-getFrameTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getHeight",
+        "id": "method-getHeight"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getHierarchyState",
+        "id": "method-getHierarchyState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "getId",
+        "id": "method-getId"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          
+        },
+        "name": "getInitialConfig",
+        "id": "method-getInitialConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          
+        },
+        "name": "getInnerTpl",
+        "id": "method-getInnerTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          
+        },
+        "name": "getInsertPosition",
+        "id": "method-getInsertPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getItemId",
+        "id": "method-getItemId"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "getItemSelector",
+        "id": "method-getItemSelector"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getLoader",
+        "id": "method-getLoader"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getLocalX",
+        "id": "method-getLocalX"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getLocalXY",
+        "id": "method-getLocalXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getLocalY",
+        "id": "method-getLocalY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "getMaskStore",
+        "id": "method-getMaskStore"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getMaskTarget",
+        "id": "method-getMaskTarget"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "getNode",
+        "id": "method-getNode"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "getNodeByRecord",
+        "id": "method-getNodeByRecord"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "getNodeContainer",
+        "id": "method-getNodeContainer"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "getNodes",
+        "id": "method-getNodes"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "getOffsetsTo",
+        "id": "method-getOffsetsTo"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getOuterSize",
+        "id": "method-getOuterSize"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getOverflowEl",
+        "id": "method-getOverflowEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getOverflowStyle",
+        "id": "method-getOverflowStyle"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getPlugin",
+        "id": "method-getPlugin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "getPosition",
+        "id": "method-getPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getPositionEl",
+        "id": "method-getPositionEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getProxy",
+        "id": "method-getProxy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "getRecord",
+        "id": "method-getRecord"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "getRecords",
+        "id": "method-getRecords"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "getRefItems",
+        "id": "method-getRefItems"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "getRefOwner",
+        "id": "method-getRefOwner"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "getRegion",
+        "id": "method-getRegion"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "getRenderTree",
+        "id": "method-getRenderTree"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getResizeEl",
+        "id": "method-getResizeEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "getSelectedNodes",
+        "id": "method-getSelectedNodes"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2",
+          "deprecated": {
+            "text": "Use {@link Ext.selection.Model#getSelection} instead.",
+            "version": "4.0"
+          }
+        },
+        "name": "getSelectedRecords",
+        "id": "method-getSelectedRecords"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2",
+          "deprecated": {
+            "text": "Use {@link Ext.selection.Model#getCount} instead.",
+            "version": "4.0"
+          }
+        },
+        "name": "getSelectionCount",
+        "id": "method-getSelectionCount"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "getSelectionModel",
+        "id": "method-getSelectionModel"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getSize",
+        "id": "method-getSize"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getSizeModel",
+        "id": "method-getSizeModel"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getState",
+        "id": "method-getState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          "private": true
+        },
+        "name": "getStateId",
+        "id": "method-getStateId"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "getStore",
+        "id": "method-getStore"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "protected": true
+        },
+        "name": "getStoreListeners",
+        "id": "method-getStoreListeners"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "getStyleProxy",
+        "id": "method-getStyleProxy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "private": true
+        },
+        "name": "getTargetEl",
+        "id": "method-getTargetEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "getTpl",
+        "id": "method-getTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "getViewRange",
+        "id": "method-getViewRange"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "getViewRegion",
+        "id": "method-getViewRegion"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "getVisibilityEl",
+        "id": "method-getVisibilityEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getWidth",
+        "id": "method-getWidth"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getX",
+        "id": "method-getX"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "getXType",
+        "id": "method-getXType"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "getXTypes",
+        "id": "method-getXTypes"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getXY",
+        "id": "method-getXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "getY",
+        "id": "method-getY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "handleEvent",
+        "id": "method-handleEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "handleMouseOverOrOut",
+        "id": "method-handleMouseOverOrOut"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          "deprecated": {
+            "text": "Replaced by {@link #getActiveAnimation}",
+            "version": "4.0"
+          }
+        },
+        "name": "hasActiveFx",
+        "id": "method-hasActiveFx"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "hasCls",
+        "id": "method-hasCls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "hasConfig",
+        "id": "method-hasConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "hasListener",
+        "id": "method-hasListener"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "hasUICls",
+        "id": "method-hasUICls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "hide",
+        "id": "method-hide"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "highlightItem",
+        "id": "method-highlightItem"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "indexOf",
+        "id": "method-indexOf"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "initCls",
+        "id": "method-initCls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "since": "Ext 1",
+          "template": true,
+          "protected": true
+        },
+        "name": "initComponent",
+        "id": "method-initComponent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "chainable": true,
+          "protected": true
+        },
+        "name": "initConfig",
+        "id": "method-initConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "initContainer",
+        "id": "method-initContainer"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "initDraggable",
+        "id": "method-initDraggable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true
+        },
+        "name": "initEvents",
+        "id": "method-initEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "initFrame",
+        "id": "method-initFrame"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "initFramingTpl",
+        "id": "method-initFramingTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "initHierarchyEvents",
+        "id": "method-initHierarchyEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "initHierarchyState",
+        "id": "method-initHierarchyState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "initPadding",
+        "id": "method-initPadding"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "initPlugin",
+        "id": "method-initPlugin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "protected": true
+        },
+        "name": "initRenderData",
+        "id": "method-initRenderData"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "initRenderTpl",
+        "id": "method-initRenderTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "initResizable",
+        "id": "method-initResizable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          "private": true
+        },
+        "name": "initState",
+        "id": "method-initState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "initStyles",
+        "id": "method-initStyles"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "is",
+        "id": "method-is"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "isContainedFloater",
+        "id": "method-isContainedFloater"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "isDescendant",
+        "id": "method-isDescendant"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isDescendantOf",
+        "id": "method-isDescendantOf"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isDisabled",
+        "id": "method-isDisabled"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isDraggable",
+        "id": "method-isDraggable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isDroppable",
+        "id": "method-isDroppable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isFloating",
+        "id": "method-isFloating"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "isFocusable",
+        "id": "method-isFocusable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isHidden",
+        "id": "method-isHidden"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "isHierarchicallyHidden",
+        "id": "method-isHierarchicallyHidden"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true
+        },
+        "name": "isLayoutRoot",
+        "id": "method-isLayoutRoot"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "isLayoutSuspended",
+        "id": "method-isLayoutSuspended"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "isLocalRtl",
+        "id": "method-isLocalRtl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "isOppositeRootDirection",
+        "id": "method-isOppositeRootDirection"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "isParentRtl",
+        "id": "method-isParentRtl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "isSelected",
+        "id": "method-isSelected"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "isVisible",
+        "id": "method-isVisible"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "isXType",
+        "id": "method-isXType"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "makeFloating",
+        "id": "method-makeFloating"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "mask",
+        "id": "method-mask"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "mon",
+        "id": "method-mon"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "move",
+        "id": "method-move"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "mun",
+        "id": "method-mun"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "nextNode",
+        "id": "method-nextNode"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "nextSibling",
+        "id": "method-nextSibling"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "on",
+        "id": "method-on"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onAdd",
+        "id": "method-onAdd"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "since": "Ext 3",
+          "template": true,
+          "protected": true
+        },
+        "name": "onAdded",
+        "id": "method-onAdded"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "onAfterFloatLayout",
+        "id": "method-onAfterFloatLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerClick",
+        "id": "method-onBeforeContainerClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerContextMenu",
+        "id": "method-onBeforeContainerContextMenu"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerDblClick",
+        "id": "method-onBeforeContainerDblClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerKeyDown",
+        "id": "method-onBeforeContainerKeyDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerMouseDown",
+        "id": "method-onBeforeContainerMouseDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerMouseOut",
+        "id": "method-onBeforeContainerMouseOut"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerMouseOver",
+        "id": "method-onBeforeContainerMouseOver"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeContainerMouseUp",
+        "id": "method-onBeforeContainerMouseUp"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemClick",
+        "id": "method-onBeforeItemClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemContextMenu",
+        "id": "method-onBeforeItemContextMenu"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemDblClick",
+        "id": "method-onBeforeItemDblClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemFocus",
+        "id": "method-onBeforeItemFocus"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemKeyDown",
+        "id": "method-onBeforeItemKeyDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemMouseDown",
+        "id": "method-onBeforeItemMouseDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemMouseEnter",
+        "id": "method-onBeforeItemMouseEnter"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemMouseLeave",
+        "id": "method-onBeforeItemMouseLeave"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onBeforeItemMouseUp",
+        "id": "method-onBeforeItemMouseUp"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "protected": true
+        },
+        "name": "onBindStore",
+        "id": "method-onBindStore"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "onBlur",
+        "id": "method-onBlur"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onBoxReady",
+        "id": "method-onBoxReady"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "private": true
+        },
+        "name": "onConfigUpdate",
+        "id": "method-onConfigUpdate"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerClick",
+        "id": "method-onContainerClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerContextMenu",
+        "id": "method-onContainerContextMenu"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerDblClick",
+        "id": "method-onContainerDblClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerKeyDown",
+        "id": "method-onContainerKeyDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerMouseDown",
+        "id": "method-onContainerMouseDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerMouseOut",
+        "id": "method-onContainerMouseOut"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerMouseOver",
+        "id": "method-onContainerMouseOver"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onContainerMouseUp",
+        "id": "method-onContainerMouseUp"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 3",
+          "private": true
+        },
+        "name": "onDataRefresh",
+        "id": "method-onDataRefresh"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "template": true,
+          "protected": true
+        },
+        "name": "onDestroy",
+        "id": "method-onDestroy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "onDisable",
+        "id": "method-onDisable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "onEnable",
+        "id": "method-onEnable"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "onFloatShow",
+        "id": "method-onFloatShow"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "onFocus",
+        "id": "method-onFocus"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "onHide",
+        "id": "method-onHide"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onIdChanged",
+        "id": "method-onIdChanged"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemClick",
+        "id": "method-onItemClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemContextMenu",
+        "id": "method-onItemContextMenu"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemDblClick",
+        "id": "method-onItemDblClick"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemDeselect",
+        "id": "method-onItemDeselect"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemFocus",
+        "id": "method-onItemFocus"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemKeyDown",
+        "id": "method-onItemKeyDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemMouseDown",
+        "id": "method-onItemMouseDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemMouseEnter",
+        "id": "method-onItemMouseEnter"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemMouseLeave",
+        "id": "method-onItemMouseLeave"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemMouseUp",
+        "id": "method-onItemMouseUp"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onItemSelect",
+        "id": "method-onItemSelect"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "onKeyDown",
+        "id": "method-onKeyDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onMaskBeforeShow",
+        "id": "method-onMaskBeforeShow"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onMaskHide",
+        "id": "method-onMaskHide"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "onMouseDown",
+        "id": "method-onMouseDown"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onMouseOverOut",
+        "id": "method-onMouseOverOut"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "onPosition",
+        "id": "method-onPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onRemove",
+        "id": "method-onRemove"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3",
+          "protected": true,
+          "template": true
+        },
+        "name": "onRemoved",
+        "id": "method-onRemoved"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "template": true,
+          "protected": true
+        },
+        "name": "onRender",
+        "id": "method-onRender"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "onResize",
+        "id": "method-onResize"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "onShow",
+        "id": "method-onShow"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "protected": true,
+          "template": true
+        },
+        "name": "onShowComplete",
+        "id": "method-onShowComplete"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "onShowVeto",
+        "id": "method-onShowVeto"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          "private": true
+        },
+        "name": "onStateChange",
+        "id": "method-onStateChange"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "protected": true
+        },
+        "name": "onUnbindStore",
+        "id": "method-onUnbindStore"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "onUpdate",
+        "id": "method-onUpdate"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "onViewScroll",
+        "id": "method-onViewScroll"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "parseBox",
+        "id": "method-parseBox"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "protected": true
+        },
+        "name": "postBlur",
+        "id": "method-postBlur"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          "private": true
+        },
+        "name": "prepareClass",
+        "id": "method-prepareClass"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "prepareData",
+        "id": "method-prepareData"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "previousNode",
+        "id": "method-previousNode"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "previousSibling",
+        "id": "method-previousSibling"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "processContainerEvent",
+        "id": "method-processContainerEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "processItemEvent",
+        "id": "method-processItemEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "processSpecialEvent",
+        "id": "method-processSpecialEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "processUIEvent",
+        "id": "method-processUIEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.ElementContainer",
+        "meta": {
+          "private": true
+        },
+        "name": "prune",
+        "id": "method-prune"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.BoundList",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "refresh",
+        "id": "method-refresh"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2"
+        },
+        "name": "refreshNode",
+        "id": "method-refreshNode"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "refreshSize",
+        "id": "method-refreshSize"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "registerFloatingItem",
+        "id": "method-registerFloatingItem"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "registerWithOwnerCt",
+        "id": "method-registerWithOwnerCt"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "relayEvents",
+        "id": "method-relayEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "chainable": true
+        },
+        "name": "removeAnchor",
+        "id": "method-removeAnchor"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.ElementContainer",
+        "meta": {
+          
+        },
+        "name": "removeChildEls",
+        "id": "method-removeChildEls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 2",
+          "private": true
+        },
+        "name": "removeClass",
+        "id": "method-removeClass"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "removeCls",
+        "id": "method-removeCls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "removeClsWithUI",
+        "id": "method-removeClsWithUI"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "removeListener",
+        "id": "method-removeListener"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "removeManagedListener",
+        "id": "method-removeManagedListener"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "removeManagedListenerItem",
+        "id": "method-removeManagedListenerItem"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "removeOverCls",
+        "id": "method-removeOverCls"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "removePlugin",
+        "id": "method-removePlugin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "removeUIClsFromElement",
+        "id": "method-removeUIClsFromElement"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "removeUIFromElement",
+        "id": "method-removeUIFromElement"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          
+        },
+        "name": "render",
+        "id": "method-render"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "restoreScrollState",
+        "id": "method-restoreScrollState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "resumeEvent",
+        "id": "method-resumeEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "resumeEvents",
+        "id": "method-resumeEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "resumeLayouts",
+        "id": "method-resumeLayouts"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "savePropToState",
+        "id": "method-savePropToState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "savePropsToState",
+        "id": "method-savePropsToState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "saveScrollState",
+        "id": "method-saveScrollState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "saveState",
+        "id": "method-saveState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "scrollBy",
+        "id": "method-scrollBy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "since": "Ext 2",
+          "deprecated": {
+            "text": "Use {@link Ext.selection.Model#select} instead.",
+            "version": "4.0"
+          }
+        },
+        "name": "select",
+        "id": "method-select"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          "chainable": true
+        },
+        "name": "sequenceFx",
+        "id": "method-sequenceFx"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "setActive",
+        "id": "method-setActive"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "setAutoScroll",
+        "id": "method-setAutoScroll"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setBorder",
+        "id": "method-setBorder"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "chainable": true
+        },
+        "name": "setBox",
+        "id": "method-setBox"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "setComponentLayout",
+        "id": "method-setComponentLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "chainable": true,
+          "private": true
+        },
+        "name": "setConfig",
+        "id": "method-setConfig"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setDisabled",
+        "id": "method-setDisabled"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setDocked",
+        "id": "method-setDocked"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "setFloatParent",
+        "id": "method-setFloatParent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setHeight",
+        "id": "method-setHeight"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "setHiddenState",
+        "id": "method-setHiddenState"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.View",
+        "meta": {
+          "private": true
+        },
+        "name": "setHighlightedItem",
+        "id": "method-setHighlightedItem"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          
+        },
+        "name": "setLoading",
+        "id": "method-setLoading"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setLocalX",
+        "id": "method-setLocalX"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setLocalXY",
+        "id": "method-setLocalXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setLocalY",
+        "id": "method-setLocalY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setMargin",
+        "id": "method-setMargin"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "setMaskBind",
+        "id": "method-setMaskBind"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "setOverflowXY",
+        "id": "method-setOverflowXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "setPagePosition",
+        "id": "method-setPagePosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "setPosition",
+        "id": "method-setPosition"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "chainable": true
+        },
+        "name": "setRegion",
+        "id": "method-setRegion"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setSize",
+        "id": "method-setSize"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setUI",
+        "id": "method-setUI"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "setVisible",
+        "id": "method-setVisible"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setWidth",
+        "id": "method-setWidth"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setX",
+        "id": "method-setX"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setXY",
+        "id": "method-setXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "setY",
+        "id": "method-setY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "setZIndex",
+        "id": "method-setZIndex"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "setupFramingTpl",
+        "id": "method-setupFramingTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "setupProtoEl",
+        "id": "method-setupProtoEl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "setupRenderTpl",
+        "id": "method-setupRenderTpl"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "show",
+        "id": "method-show"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "showAt",
+        "id": "method-showAt"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "showBy",
+        "id": "method-showBy"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Base",
+        "meta": {
+          "protected": true
+        },
+        "name": "statics",
+        "id": "method-statics"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          "chainable": true
+        },
+        "name": "stopAnimation",
+        "id": "method-stopAnimation"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          "deprecated": {
+            "text": "Replaced by {@link #stopAnimation}",
+            "version": "4.0"
+          }
+        },
+        "name": "stopFx",
+        "id": "method-stopFx"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "suspendEvent",
+        "id": "method-suspendEvent"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "suspendEvents",
+        "id": "method-suspendEvents"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "suspendLayouts",
+        "id": "method-suspendLayouts"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Animate",
+        "meta": {
+          "chainable": true
+        },
+        "name": "syncFx",
+        "id": "method-syncFx"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "syncHidden",
+        "id": "method-syncHidden"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "private": true
+        },
+        "name": "syncShadow",
+        "id": "method-syncShadow"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          "chainable": true
+        },
+        "name": "toBack",
+        "id": "method-toBack"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Floating",
+        "meta": {
+          
+        },
+        "name": "toFront",
+        "id": "method-toFront"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          
+        },
+        "name": "translatePoints",
+        "id": "method-translatePoints"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Positionable",
+        "meta": {
+          "private": true
+        },
+        "name": "translateXY",
+        "id": "method-translateXY"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Observable",
+        "meta": {
+          
+        },
+        "name": "un",
+        "id": "method-un"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Bindable",
+        "meta": {
+          "protected": true
+        },
+        "name": "unbindStoreListeners",
+        "id": "method-unbindStoreListeners"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "unitizeBox",
+        "id": "method-unitizeBox"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "unmask",
+        "id": "method-unmask"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "unregisterFloatingItem",
+        "id": "method-unregisterFloatingItem"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "up",
+        "id": "method-up"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "update",
+        "id": "method-update"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "private": true
+        },
+        "name": "updateAria",
+        "id": "method-updateAria"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "chainable": true
+        },
+        "name": "updateBox",
+        "id": "method-updateBox"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.util.Renderable",
+        "meta": {
+          "private": true
+        },
+        "name": "updateFrame",
+        "id": "method-updateFrame"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          "private": true
+        },
+        "name": "updateIndexes",
+        "id": "method-updateIndexes"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "updateLayout",
+        "id": "method-updateLayout"
+      },
+      {
+        "tagname": "method",
+        "owner": "Ext.Component",
+        "meta": {
+          "private": true
+        },
+        "name": "wrapPrimaryEl",
+        "id": "method-wrapPrimaryEl"
+      }
+    ],
+    "event": [
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "activate",
+        "id": "event-activate"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "added",
+        "id": "event-added"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "afterrender",
+        "id": "event-afterrender"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "beforeactivate",
+        "id": "event-beforeactivate"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainerclick",
+        "id": "event-beforecontainerclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainercontextmenu",
+        "id": "event-beforecontainercontextmenu"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainerdblclick",
+        "id": "event-beforecontainerdblclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainerkeydown",
+        "id": "event-beforecontainerkeydown"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainermousedown",
+        "id": "event-beforecontainermousedown"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainermouseout",
+        "id": "event-beforecontainermouseout"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainermouseover",
+        "id": "event-beforecontainermouseover"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforecontainermouseup",
+        "id": "event-beforecontainermouseup"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "beforedeactivate",
+        "id": "event-beforedeactivate"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforedeselect",
+        "id": "event-beforedeselect"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "beforedestroy",
+        "id": "event-beforedestroy"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "beforehide",
+        "id": "event-beforehide"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemclick",
+        "id": "event-beforeitemclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemcontextmenu",
+        "id": "event-beforeitemcontextmenu"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemdblclick",
+        "id": "event-beforeitemdblclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemkeydown",
+        "id": "event-beforeitemkeydown"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemmousedown",
+        "id": "event-beforeitemmousedown"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemmouseenter",
+        "id": "event-beforeitemmouseenter"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemmouseleave",
+        "id": "event-beforeitemmouseleave"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeitemmouseup",
+        "id": "event-beforeitemmouseup"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "beforerefresh",
+        "id": "event-beforerefresh"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "beforerender",
+        "id": "event-beforerender"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "beforeselect",
+        "id": "event-beforeselect"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "beforeshow",
+        "id": "event-beforeshow"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "beforestaterestore",
+        "id": "event-beforestaterestore"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "beforestatesave",
+        "id": "event-beforestatesave"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "blur",
+        "id": "event-blur"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "boxready",
+        "id": "event-boxready"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "containerclick",
+        "id": "event-containerclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "containercontextmenu",
+        "id": "event-containercontextmenu"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "containerdblclick",
+        "id": "event-containerdblclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "containerkeydown",
+        "id": "event-containerkeydown"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "containermouseout",
+        "id": "event-containermouseout"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "containermouseover",
+        "id": "event-containermouseover"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "containermouseup",
+        "id": "event-containermouseup"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "deactivate",
+        "id": "event-deactivate"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "deselect",
+        "id": "event-deselect"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "destroy",
+        "id": "event-destroy"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "disable",
+        "id": "event-disable"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "enable",
+        "id": "event-enable"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "focus",
+        "id": "event-focus"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "focuschange",
+        "id": "event-focuschange"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "hide",
+        "id": "event-hide"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "highlightitem",
+        "id": "event-highlightitem"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "itemadd",
+        "id": "event-itemadd"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemclick",
+        "id": "event-itemclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemcontextmenu",
+        "id": "event-itemcontextmenu"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemdblclick",
+        "id": "event-itemdblclick"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemkeydown",
+        "id": "event-itemkeydown"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemmousedown",
+        "id": "event-itemmousedown"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemmouseenter",
+        "id": "event-itemmouseenter"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemmouseleave",
+        "id": "event-itemmouseleave"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "itemmouseup",
+        "id": "event-itemmouseup"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "itemremove",
+        "id": "event-itemremove"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "itemupdate",
+        "id": "event-itemupdate"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "move",
+        "id": "event-move"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "refresh",
+        "id": "event-refresh"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 3"
+        },
+        "name": "removed",
+        "id": "event-removed"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "render",
+        "id": "event-render"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          
+        },
+        "name": "resize",
+        "id": "event-resize"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "select",
+        "id": "event-select"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "selectionchange",
+        "id": "event-selectionchange"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.AbstractComponent",
+        "meta": {
+          "since": "Ext 1"
+        },
+        "name": "show",
+        "id": "event-show"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "staterestore",
+        "id": "event-staterestore"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.state.Stateful",
+        "meta": {
+          
+        },
+        "name": "statesave",
+        "id": "event-statesave"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.View",
+        "meta": {
+          
+        },
+        "name": "unhighlightitem",
+        "id": "event-unhighlightitem"
+      },
+      {
+        "tagname": "event",
+        "owner": "Ext.view.AbstractView",
+        "meta": {
+          
+        },
+        "name": "viewready",
+        "id": "event-viewready"
+      }
+    ],
+    "css_mixin": [
+      
+    ]
+  },
+  "inheritable": null,
+  "private": null,
+  "component": true,
+  "name": "Ext.view.BoundList",
+  "singleton": false,
+  "override": null,
+  "inheritdoc": null,
+  "id": "class-Ext.view.BoundList",
+  "mixins": [
+    
+  ],
+  "mixedInto": [
+    
+  ]
+}

@@ -1,0 +1,10 @@
+*.gen.c
+/.vimrc
+/sjson-test
+/sjson-bench
+/coverage
+/coverage.info
+/*.gcno
+/*.gcda
+/*.gcno
+/leak.log

@@ -1,0 +1,3 @@
+- sjson_get("{test: [true]}", "$.test[0]?bool", &bool_storage, NULL) == TRUE if success
+
+ __attribute__((sjson_build_format("sjidbn", 0)))

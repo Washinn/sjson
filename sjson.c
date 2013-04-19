@@ -941,7 +941,6 @@ gchar* s_json_buildv(const gchar* format, va_list args)
 
 /*!re2c
     (WS | "{" | "}" | "[" | "]" | NOESC_STRING | STRING | ":" | "," | NUMBER | "true" | "false" | "null")+ {
-      //g_print("X: %s\n", g_strndup(s, c - s));
       g_string_append_len(str, s, c - s);
       continue;
     }
@@ -990,7 +989,6 @@ gchar* s_json_buildv(const gchar* format, va_list args)
 
     . | "\n" {
       goto err;
-      //g_assert_not_reached();
     }
 */
   }

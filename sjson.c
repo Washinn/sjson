@@ -161,7 +161,7 @@ done:
   return token;
 }
 
-SJsonType token_to_type(gint token)
+static SJsonType token_to_type(gint token)
 {
   switch (token)
   {

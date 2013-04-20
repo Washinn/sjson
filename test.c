@@ -233,7 +233,7 @@ void test_getters_array()
 
 void test_getters_object()
 {
-  const gchar* json = "{\"a\": \"p\", \"ssl\": 1, \"f\": [1, 5, 7], \"b\": true, \"n\": null}";
+  const gchar* json = "{\"a\\n\": \"p\", \"ssl\": 1, \"f\": [1, 5, 7], \"b\": true, \"n\": null}";
   const gchar* key, *value;
 
   // VALID
@@ -241,7 +241,7 @@ void test_getters_object()
   g_assert(s_json_is_valid(json));
 
   key = s_json_get_member_first(json, &value);
-  g_assert_cmpstr(s_json_get_string(key), ==, "a");
+  g_assert_cmpstr(s_json_get_string(key), ==, "a\n");
   g_assert_cmpstr(s_json_get_string(value), ==, "p");
   key = s_json_get_member_next(&value);
   g_assert_cmpstr(s_json_get_string(key), ==, "ssl");
@@ -258,10 +258,10 @@ void test_getters_object()
   key = s_json_get_member_next(&value);
   g_assert(key == NULL);
 
-  g_assert_cmpint(s_json_get_type(s_json_get_member(json, "a")), ==, S_JSON_TYPE_STRING);
+  g_assert_cmpint(s_json_get_type(s_json_get_member(json, "a\n")), ==, S_JSON_TYPE_STRING);
   g_assert_cmpint(s_json_get_type(s_json_get_member(json, "f")), ==, S_JSON_TYPE_ARRAY);
 
-  g_assert_cmpstr(s_json_get_member_string(json, "a"), ==, "p");
+  g_assert_cmpstr(s_json_get_member_string(json, "a\n"), ==, "p");
   g_assert_cmpint(s_json_get_member_int(json, "ssl", -1), ==, 1);
   g_assert_cmpint(s_json_get_member_double(json, "ssl", -1), ==, 1);
   g_assert(s_json_get_member_bool(json, "b"));
@@ -270,9 +270,9 @@ void test_getters_object()
   g_assert(s_json_member_is_null(json, "bad")); // non-existing member reported as null
 
   S_JSON_FOREACH_MEMBER(json, k, v)
-    g_print("%s = %s\n", s_json_get_string(k), s_json_pretty(v));
+    if (s_json_string_match(k, "a\n"))
+      g_assert_cmpint(s_json_get_type(v), ==, S_JSON_TYPE_STRING);
   S_JSON_FOREACH_END()
-
 
   // INVALID
 
@@ -493,6 +493,22 @@ void test_formatters()
   g_assert_cmpstr(NULL, ==, s_json_compact("^^"));
 }
 
+void test_util()
+{
+  g_assert(s_json_string_match("\"\"", ""));
+  g_assert(s_json_string_match("\"a\"", "a"));
+  g_assert(s_json_string_match("\"abc\"", "abc"));
+  g_assert(s_json_string_match("\"\\n\"", "\n"));
+  g_assert(s_json_string_match("\"\\u0030\"", "0"));
+
+  g_assert(!s_json_string_match("\"\"", " "));
+  g_assert(!s_json_string_match("\" \"", ""));
+  g_assert(!s_json_string_match("\"a\"", "a "));
+  g_assert(!s_json_string_match("\"a \"", "a"));
+  g_assert(!s_json_string_match("\"a\"", "b"));
+  g_assert(!s_json_string_match("\"\\n\"", "\\n"));
+}
+
 int main(int argc, char **argv)
 {
   g_test_init(&argc, &argv, NULL);
@@ -506,6 +522,7 @@ int main(int argc, char **argv)
   g_test_add_func("/builder", test_builder);
   g_test_add_func("/generator", test_generator);
   g_test_add_func("/formatters", test_formatters);
+  g_test_add_func("/util", test_util);
 
   return g_test_run();
 }

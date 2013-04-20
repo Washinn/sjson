@@ -67,44 +67,48 @@ gdouble        s_json_get_member_double     (const gchar* json, const gchar* nam
 gboolean       s_json_get_member_bool       (const gchar* json, const gchar* name);
 gboolean       s_json_member_is_null        (const gchar* json, const gchar* name);
 
+// helper utils
+
+gboolean       s_json_string_match          (const gchar* json_str, const gchar* c_str);
+
 // json path
 
-const gchar*   s_json_path                      (const gchar* json, const gchar* path);
+const gchar*   s_json_path                  (const gchar* json, const gchar* path);
 
 // generator
 
-SJsonGen*      s_json_gen_new                   (void);
-void           s_json_gen_start_object          (SJsonGen* json);
-void           s_json_gen_end_object            (SJsonGen* json);
-void           s_json_gen_start_array           (SJsonGen* json);
-void           s_json_gen_end_array             (SJsonGen* json);
-void           s_json_gen_json                  (SJsonGen* json, const gchar* v);
-void           s_json_gen_build                 (SJsonGen* json, const gchar* fmt, ...);
-void           s_json_gen_string                (SJsonGen* json, const gchar* v);
-void           s_json_gen_int                   (SJsonGen* json, gint64 v);
-void           s_json_gen_double                (SJsonGen* json, gdouble v);
-void           s_json_gen_bool                  (SJsonGen* json, gboolean v);
-void           s_json_gen_null                  (SJsonGen* json);
-void           s_json_gen_member_json           (SJsonGen* json, const gchar* name, const gchar* v);
-void           s_json_gen_member_build          (SJsonGen* json, const gchar* name, const gchar* fmt, ...);
-void           s_json_gen_member_string         (SJsonGen* json, const gchar* name, const gchar* v);
-void           s_json_gen_member_int            (SJsonGen* json, const gchar* name, gint64 v);
-void           s_json_gen_member_double         (SJsonGen* json, const gchar* name, gdouble v);
-void           s_json_gen_member_bool           (SJsonGen* json, const gchar* name, gboolean v);
-void           s_json_gen_member_null           (SJsonGen* json, const gchar* name);
-void           s_json_gen_member_array          (SJsonGen* json, const gchar* name);
-void           s_json_gen_member_object         (SJsonGen* json, const gchar* name);
-gchar*         s_json_gen_done                  (SJsonGen* json);
+SJsonGen*      s_json_gen_new               (void);
+void           s_json_gen_start_object      (SJsonGen* json);
+void           s_json_gen_end_object        (SJsonGen* json);
+void           s_json_gen_start_array       (SJsonGen* json);
+void           s_json_gen_end_array         (SJsonGen* json);
+void           s_json_gen_json              (SJsonGen* json, const gchar* v);
+void           s_json_gen_build             (SJsonGen* json, const gchar* fmt, ...);
+void           s_json_gen_string            (SJsonGen* json, const gchar* v);
+void           s_json_gen_int               (SJsonGen* json, gint64 v);
+void           s_json_gen_double            (SJsonGen* json, gdouble v);
+void           s_json_gen_bool              (SJsonGen* json, gboolean v);
+void           s_json_gen_null              (SJsonGen* json);
+void           s_json_gen_member_json       (SJsonGen* json, const gchar* name, const gchar* v);
+void           s_json_gen_member_build      (SJsonGen* json, const gchar* name, const gchar* fmt, ...);
+void           s_json_gen_member_string     (SJsonGen* json, const gchar* name, const gchar* v);
+void           s_json_gen_member_int        (SJsonGen* json, const gchar* name, gint64 v);
+void           s_json_gen_member_double     (SJsonGen* json, const gchar* name, gdouble v);
+void           s_json_gen_member_bool       (SJsonGen* json, const gchar* name, gboolean v);
+void           s_json_gen_member_null       (SJsonGen* json, const gchar* name);
+void           s_json_gen_member_array      (SJsonGen* json, const gchar* name);
+void           s_json_gen_member_object     (SJsonGen* json, const gchar* name);
+gchar*         s_json_gen_done              (SJsonGen* json);
 
 // builder
 
-gchar*         s_json_buildv                    (const gchar* format, va_list args);
-gchar*         s_json_build                     (const gchar* format, ...);
+gchar*         s_json_buildv                (const gchar* format, va_list args);
+gchar*         s_json_build                 (const gchar* format, ...);
 
 // formatters
 
-gchar*         s_json_pretty                    (const gchar* json);
-gchar*         s_json_compact                   (const gchar* json);
+gchar*         s_json_pretty                (const gchar* json);
+gchar*         s_json_compact               (const gchar* json);
 
 // iterator macros
 

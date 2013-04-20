@@ -340,31 +340,33 @@ const gchar* s_json_get_element_next(const gchar* iter)
 
 const gchar* s_json_get_element(const gchar* json, guint index)
 {
-  const gchar* iter;
   guint current_index = 0;
 
   g_return_val_if_fail(json != NULL, NULL);
 
-  for (iter = s_json_get_element_first(json); iter; iter = s_json_get_element_next(iter))
-  {
+  S_JSON_FOREACH_ELEMENT(json, elem)
+
     if (current_index == index)
-      return iter;
+      return elem;
 
     current_index++;
-  }
+
+  S_JSON_FOREACH_END()
+
+  return NULL;
 }
 
 gchar** s_json_get_elements(const gchar* json)
 {
-  const gchar* iter;
   GPtrArray* arr;
 
   g_return_val_if_fail(json != NULL, NULL);
 
   arr = g_ptr_array_sized_new(64);
 
-  for (iter = s_json_get_element_first(json); iter; iter = s_json_get_element_next(iter))
-    g_ptr_array_add(arr, (gchar*)iter);
+  S_JSON_FOREACH_ELEMENT(json, elem)
+    g_ptr_array_add(arr, (gchar*)elem);
+  S_JSON_FOREACH_END()
 
   g_ptr_array_add(arr, NULL);
 
@@ -424,32 +426,15 @@ const gchar* s_json_get_member_next(const gchar** value)
 
 const gchar* s_json_get_member(const gchar* json, const gchar* name)
 {
-  const gchar *value, *key, *start_key, *end_key;
-
   g_return_val_if_fail(json != NULL, NULL);
   g_return_val_if_fail(name != NULL, NULL);
 
-  for (key = s_json_get_member_first(json, &value); key; key = s_json_get_member_next(&value))
-  {
-    if (s_json_get_token(key, &start_key, &end_key) == TOK_NOESC_STRING)
-    {
-      // fast path
-      gsize key_len = ((end_key - start_key) - 2);
+  S_JSON_FOREACH_MEMBER(json, key, value)
 
-      if (strlen(name) == key_len && !strncmp(start_key + 1, name, key_len))
-        return value;
-    }
-    else
-    {
-      // slow path
-      gchar* member_name = s_json_get_string(key);
-      gboolean match = !strcmp(member_name, name);
-      g_free(member_name);
+    if (s_json_string_match(key, name))
+      return value;
 
-      if (match)
-        return value;
-    }
-  }
+  S_JSON_FOREACH_END()
 
   return NULL;
 }
@@ -581,6 +566,38 @@ gboolean s_json_is_null(const gchar* json)
     return TRUE;
 
   return FALSE;
+}
+
+gboolean s_json_string_match(const gchar* json_str, const gchar* c_str)
+{
+  const gchar *start, *end;
+  gint token;
+
+  g_return_val_if_fail(json_str != NULL, FALSE);
+  g_return_val_if_fail(c_str != NULL, FALSE);
+
+  token = s_json_get_token(json_str, &start, &end);
+  if (token == TOK_NOESC_STRING)
+  {
+    // fast path
+    gsize json_len = ((end - start) - 2);
+    gint rs = strncmp(start + 1, c_str, json_len);
+
+    return rs == 0 ? strlen(c_str) == json_len : FALSE;
+  }
+  else if (token == TOK_STRING)
+  {
+    // slow path
+    gchar* str = s_json_get_string(json_str);
+    gint rs = strcmp(str, c_str);
+    g_free(str);
+
+    return rs == 0;
+  }
+  else
+  {
+    return FALSE;
+  }
 }
 
 // helpers

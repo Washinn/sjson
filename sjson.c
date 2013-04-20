@@ -304,9 +304,8 @@ SJsonType s_json_get_type(const gchar* json)
   return token_to_type(s_json_get_token(json, NULL, NULL));
 }
 
-const gchar* s_json_get_element(const gchar* json, guint index)
+const gchar* s_json_get_element_first(const gchar* json)
 {
-  const gchar* elem;
   const gchar* next_elem;
   gint token;
 
@@ -316,112 +315,140 @@ const gchar* s_json_get_element(const gchar* json, guint index)
   if (token != TOK_ARRAY_START)
     return NULL;
 
-  while (TRUE)
+  if (s_json_get_token(next_elem, NULL, NULL) == TOK_ARRAY_END)
+    return NULL;
+
+  return next_elem;
+}
+
+const gchar* s_json_get_element_next(const gchar* iter)
+{
+  const gchar* next_elem;
+  gint token;
+
+  g_return_val_if_fail(iter != NULL, NULL);
+
+  if (!s_json_is_valid_inner(iter, &next_elem))
+    return NULL;
+
+  token = s_json_get_token(next_elem, NULL, &next_elem);
+  if (token != TOK_COMMA)
+    return NULL;
+
+  return next_elem;
+}
+
+const gchar* s_json_get_element(const gchar* json, guint index)
+{
+  const gchar* iter;
+  guint current_index = 0;
+
+  g_return_val_if_fail(json != NULL, NULL);
+
+  for (iter = s_json_get_element_first(json); iter; iter = s_json_get_element_next(iter))
   {
-    elem = next_elem;
-    if (!s_json_is_valid_inner(elem, &next_elem))
-      return NULL;
+    if (current_index == index)
+      return iter;
 
-    if (index-- == 0)
-      return elem;
-
-    token = s_json_get_token(next_elem, NULL, &next_elem);
-    if (token != TOK_COMMA)
-      return NULL;
+    current_index++;
   }
 }
 
 gchar** s_json_get_elements(const gchar* json)
 {
-  const gchar* elem;
-  const gchar* next_elem;
-  gint token;
+  const gchar* iter;
   GPtrArray* arr;
 
   g_return_val_if_fail(json != NULL, NULL);
 
-  token = s_json_get_token(json, NULL, &next_elem);
-  if (token != TOK_ARRAY_START)
-    return NULL;
-
   arr = g_ptr_array_sized_new(64);
 
-  if (s_json_get_token(next_elem, NULL, NULL) == TOK_ARRAY_END)
-  {
-    g_ptr_array_add(arr, NULL);
-    return (gchar**)g_ptr_array_free(arr, FALSE);
-  }
+  for (iter = s_json_get_element_first(json); iter; iter = s_json_get_element_next(iter))
+    g_ptr_array_add(arr, (gchar*)iter);
 
-  while (TRUE)
-  {
-    elem = next_elem;
-    if (!s_json_is_valid_inner(elem, &next_elem))
-    {
-      g_ptr_array_free(arr, TRUE);
-      return NULL;
-    }
+  g_ptr_array_add(arr, NULL);
 
-    g_ptr_array_add(arr, (gchar*)elem);
+  return (gchar**)g_ptr_array_free(arr, FALSE);
+}
 
-    token = s_json_get_token(next_elem, NULL, &next_elem);
-    if (token != TOK_COMMA)
-    {
-      if (token == TOK_ARRAY_END)
-      {
-        g_ptr_array_add(arr, NULL);
-        return (gchar**)g_ptr_array_free(arr, FALSE);
-      }
-      
-      g_ptr_array_free(arr, TRUE);
-      return NULL;
-    }
-  }
+const gchar* s_json_get_member_first(const gchar* json, const gchar** value)
+{
+  const gchar* key;
+  const gchar* colon;
+  const gchar* val;
+  gint token;
+
+  g_return_val_if_fail(json != NULL, NULL);
+  g_return_val_if_fail(value != NULL, NULL);
+
+  if (s_json_get_token(json, NULL, &key) != TOK_OBJ_START)
+    return NULL;
+
+  token = s_json_get_token(key, NULL, &colon);
+  if (token != TOK_STRING && token != TOK_NOESC_STRING)
+    return NULL;
+
+  if (s_json_get_token(colon, NULL, &val) != TOK_COLON)
+    return NULL;
+
+  *value = val;
+  return key;
+}
+
+const gchar* s_json_get_member_next(const gchar** value)
+{
+  const gchar* comma;
+  const gchar* key;
+  const gchar* colon;
+  const gchar* val;
+  gint token;
+
+  g_return_val_if_fail(value != NULL && *value != NULL, NULL);
+
+  if (!s_json_is_valid_inner(*value, &comma))
+    return NULL;
+
+  if (s_json_get_token(comma, NULL, &key) != TOK_COMMA)
+    return NULL;
+
+  token = s_json_get_token(key, NULL, &colon);
+  if (token != TOK_STRING && token != TOK_NOESC_STRING)
+    return NULL;
+
+  if (s_json_get_token(colon, NULL, &val) != TOK_COLON)
+    return NULL;
+
+  *value = val;
+  return key;
 }
 
 const gchar* s_json_get_member(const gchar* json, const gchar* name)
 {
-  const gchar* member;
-  const gchar* next_member;
-  gint token;
+  const gchar *value, *key, *start_key, *end_key;
 
   g_return_val_if_fail(json != NULL, NULL);
   g_return_val_if_fail(name != NULL, NULL);
 
-  token = s_json_get_token(json, NULL, &next_member);
-  if (token != TOK_OBJ_START)
-    return NULL;
-
-  while (TRUE)
+  for (key = s_json_get_member_first(json, &value); key; key = s_json_get_member_next(&value))
   {
-    member = next_member;
-
-    token = s_json_get_token(member, NULL, &next_member);
-    if (token != TOK_STRING && token != TOK_NOESC_STRING)
-      return NULL;
-
-    token = s_json_get_token(next_member, NULL, &next_member);
-    if (token != TOK_COLON)
-      return NULL;
-
-    gchar* member_name = s_json_get_string(member);
-    if (!member_name)
-      return NULL;
-
-    // match member name
-    if (!strcmp(member_name, name))
+    if (s_json_get_token(key, &start_key, &end_key) == TOK_NOESC_STRING)
     {
-      g_free(member_name);
-      return next_member;
+      // fast path
+      gsize key_len = ((end_key - start_key) - 2);
+
+      if (strlen(name) == key_len && !strncmp(start_key + 1, name, key_len))
+        return value;
     }
+    else
+    {
+      // slow path
+      gchar* member_name = s_json_get_string(key);
+      gboolean match = !strcmp(member_name, name);
+      g_free(member_name);
 
-    g_free(member_name);
-
-    if (!s_json_is_valid_inner(next_member, &next_member))
-      return NULL;
-
-    token = s_json_get_token(next_member, NULL, &next_member);
-    if (token != TOK_COMMA)
-      return NULL;
+      if (match)
+        return value;
+    }
   }
 
   return NULL;

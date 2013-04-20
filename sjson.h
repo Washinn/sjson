@@ -45,9 +45,16 @@ gboolean       s_json_is_valid              (const gchar* json);
 gchar*         s_json_get                   (const gchar* json);
 
 SJsonType      s_json_get_type              (const gchar* json);
+
+const gchar*   s_json_get_element_first     (const gchar* json);
+const gchar*   s_json_get_element_next      (const gchar* iter);
 const gchar*   s_json_get_element           (const gchar* json, guint index);
 gchar**        s_json_get_elements          (const gchar* json);
+
+const gchar*   s_json_get_member_first      (const gchar* json, const gchar** value);
+const gchar*   s_json_get_member_next       (const gchar** value);
 const gchar*   s_json_get_member            (const gchar* json, const gchar* name);
+
 gchar*         s_json_get_string            (const gchar* json);
 gint64         s_json_get_int               (const gchar* json, gint64 fallback);
 gdouble        s_json_get_double            (const gchar* json, gdouble fallback);
@@ -98,5 +105,20 @@ gchar*         s_json_build                     (const gchar* format, ...);
 
 gchar*         s_json_pretty                    (const gchar* json);
 gchar*         s_json_compact                   (const gchar* json);
+
+// iterator macros
+
+#define S_JSON_FOREACH_ELEMENT(json, iter) \
+  G_STMT_START { \
+    const gchar* iter; \
+    for (iter = s_json_get_element_first(json); iter; iter = s_json_get_element_next(iter)) {
+
+#define S_JSON_FOREACH_MEMBER(json, key, value) \
+  G_STMT_START { \
+    const gchar *key, *value; \
+    for (key = s_json_get_member_first(json, &value); key; key = s_json_get_member_next(&value)) {
+
+#define S_JSON_FOREACH_END() \
+  }} G_STMT_END;
 
 #endif

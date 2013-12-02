@@ -44,6 +44,7 @@ enum
   re2c:define:YYCTYPE  = "guchar";
   re2c:define:YYCURSOR = c;
   re2c:define:YYMARKER = m;
+  re2c:define:YYCTXMARKER = cm;
   re2c:yyfill:enable   = 0;
   re2c:yych:conversion = 1;
   re2c:indent:top      = 1;
@@ -982,6 +983,7 @@ gchar* s_json_buildv(const gchar* format, va_list args)
   GString* str = g_string_sized_new(strlen(format));
   const guchar* c = (const guchar*)format;
   const guchar* m = NULL;
+  const guchar* cm = NULL;
   const guchar* s;
 
 #define IS_NULLABLE (s[1] == '?')
@@ -1004,7 +1006,12 @@ gchar* s_json_buildv(const gchar* format, va_list args)
     s = c;
 
 /*!re2c
-    (WS | "{" | "}" | "[" | "]" | NOESC_STRING | STRING | ":" | "," | NUMBER | "true" | "false" | "null")+ {
+    (WS | "{" | "}" | "[" | "]" | NOESC_STRING | STRING | ":" | "," | NUMBER)+ {
+      g_string_append_len(str, s, c - s);
+      continue;
+    }
+
+    ("true" | "false" | "null") / [^a-zA-Z0-9_-] {
       g_string_append_len(str, s, c - s);
       continue;
     }

@@ -767,7 +767,13 @@ void s_json_gen_build(SJsonGen* json, const gchar* fmt, ...)
   v = s_json_buildv(fmt, args);
   va_end(args);
 
-  s_json_gen_json(json, v);
+  if (v)
+  {
+    g_string_append(json->str, v);
+    g_string_append_c(json->str, ',');
+  }
+  else
+    s_json_gen_null(json);
 
   g_free(v);
 }
@@ -778,7 +784,13 @@ void s_json_gen_json(SJsonGen* json, const gchar* v)
 
   if (v)
   {
-    g_string_append(json->str, v);
+    const gchar* end;
+
+    if (s_json_is_valid_inner(v, &end))
+      g_string_append_len(json->str, v, end - v); 
+    else
+      g_string_append(json->str, "null");
+
     g_string_append_c(json->str, ',');
   }
   else

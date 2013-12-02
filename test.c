@@ -496,8 +496,15 @@ void test_formatters()
   g_assert_cmpstr(s_json_pretty(json_compact), ==, s_json_pretty(json));
   g_assert_cmpstr(s_json_pretty(json), ==, json_pretty);
 
+  g_assert_cmpstr(s_json_pretty("{}"), ==, "{}");
+  g_assert_cmpstr(s_json_compact("{}"), ==, "{}");
+  g_assert_cmpstr(s_json_compact(" 1, "), ==, "1");
+  g_assert_cmpstr(s_json_pretty("  1 ,"), ==, "1");
+
   // INVALID
 
+  g_assert_cmpstr(s_json_pretty(""), ==, NULL);
+  g_assert_cmpstr(s_json_compact(""), ==, NULL);
   g_assert_cmpstr(NULL, ==, s_json_pretty("{"));
   g_assert_cmpstr(NULL, ==, s_json_pretty("^"));
   g_assert_cmpstr(NULL, ==, s_json_compact("{"));

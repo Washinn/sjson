@@ -1090,17 +1090,16 @@ gchar* s_json_pretty(const gchar* json)
 {
   const gchar* start;
   const gchar* end;
+  const gchar* json_end;
   GString *str, *ind;
-  gchar* json_valid;
 
   g_return_val_if_fail(json != NULL, NULL);
 
   // validate and isolate
-  json_valid = s_json_get(json);
-  if (!json_valid)
+  if (!s_json_is_valid_inner(json, &json_end))
     return NULL;
 
-  start = json_valid;
+  start = json;
 
   str = g_string_sized_new(strlen(json) * 2);
   ind = g_string_sized_new(50);
@@ -1112,9 +1111,14 @@ gchar* s_json_pretty(const gchar* json)
   gint prev_token = TOK_NONE;
   while (TRUE)
   {
+    // if next token starts at the end of the fragment, end the loop
+    if (json_end == start)
+      break;
+
     gint token = s_json_get_token(start, &start, &end);
     if (token == TOK_NONE)
       break;
+
     gint next_token = s_json_get_token(end, NULL, NULL);
 
     if ((token == TOK_OBJ_END && prev_token != TOK_OBJ_START) || (token == TOK_ARRAY_END && prev_token != TOK_ARRAY_START && prev_token != TOK_OBJ_END))
@@ -1154,11 +1158,9 @@ gchar* s_json_pretty(const gchar* json)
   }
 
   g_string_free(ind, TRUE);
-  g_free(json_valid);
 
   return g_string_free(str, FALSE);
 }
-
 
 const gchar* s_json_path(const gchar* json, const gchar* path)
 {
@@ -1277,19 +1279,18 @@ gchar* s_json_compact(const gchar* json)
   const guchar* c = (const guchar*)json;
   const guchar* m = NULL;
   const guchar* s;
-  gchar* json_valid;
+  const gchar* json_end;
 
   // validate and isolate
-  json_valid = s_json_get(json);
-  if (!json_valid)
+  if (!s_json_is_valid_inner(json, &json_end))
     return NULL;
 
-  while (TRUE)
+  while (c < (const guchar*)json_end)
   {
     s = c;
 
 /*!re2c
-    ("{" | "}" | "[" | "]" | NOESC_STRING | STRING | ":" | "," | NUMBER | "true" | "false" | "null")+ {
+    "{" | "}" | "[" | "]" | NOESC_STRING | STRING | ":" | "," | NUMBER | "true" | "false" | "null" {
       g_string_append_len(str, s, c - s);
       continue;
     }
@@ -1308,11 +1309,9 @@ gchar* s_json_compact(const gchar* json)
 */
   }
 
-  g_free(json_valid);
   return g_string_free(str, FALSE);
 
 err:
-  g_free(json_valid);
   g_string_free(str, TRUE);
   return NULL;
 }

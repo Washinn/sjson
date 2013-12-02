@@ -412,6 +412,15 @@ void test_builder()
   g_assert_cmpstr("null", ==, s_json_build("%?S", TRUE, g_strdup("str")));
   g_assert_cmpstr("\"str\"", ==, s_json_build("%?S", FALSE, g_strdup("str")));
 
+  // unquoted names/strings
+  g_assert_cmpstr("{\"a\":\"b\"}", ==, s_json_build("{a:b}"));
+  g_assert_cmpstr("{\"a\":\"nullify\"}", ==, s_json_build("{a:nullify}"));
+  g_assert_cmpstr("{\"a\":\"trueify\"}", ==, s_json_build("{a:trueify}"));
+  g_assert_cmpstr("{\"a\":\"falseify\"}", ==, s_json_build("{a:falseify}"));
+  g_assert_cmpstr("{\"a\":false}", ==, s_json_build("{a:false}"));
+  g_assert_cmpstr("{\"a\":true}", ==, s_json_build("{a:true}"));
+  g_assert_cmpstr("{\"a\":null}", ==, s_json_build("{a:null}"));
+
   // INVALID
 
   // s_json_build output is automatically validated
@@ -477,7 +486,7 @@ void test_generator()
 
 void test_formatters()
 {
-  const gchar* json = "\n\n[{\"a\": 1}, {\"b\":\n 2},\t {\"c\": [{}]}, 1]  ";
+  const gchar* json = "\n\n[{\"a\": 1}, {\"b\":\n 2},\t {\"c\": [{}]}, 1], {} ";
   const gchar* json_compact = "[{\"a\":1},{\"b\":2},{\"c\":[{}]},1]";
   const gchar* json_pretty = "[{\n\t\"a\": 1\n}, {\n\t\"b\": 2\n}, {\n\t\"c\": [{}]\n},\n1\n]";
 
@@ -490,7 +499,9 @@ void test_formatters()
   // INVALID
 
   g_assert_cmpstr(NULL, ==, s_json_pretty("{"));
-  g_assert_cmpstr(NULL, ==, s_json_compact("^^"));
+  g_assert_cmpstr(NULL, ==, s_json_pretty("^"));
+  g_assert_cmpstr(NULL, ==, s_json_compact("{"));
+  g_assert_cmpstr(NULL, ==, s_json_compact("^"));
 }
 
 void test_util()

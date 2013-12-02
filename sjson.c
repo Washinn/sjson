@@ -1277,6 +1277,12 @@ gchar* s_json_compact(const gchar* json)
   const guchar* c = (const guchar*)json;
   const guchar* m = NULL;
   const guchar* s;
+  gchar* json_valid;
+
+  // validate and isolate
+  json_valid = s_json_get(json);
+  if (!json_valid)
+    return NULL;
 
   while (TRUE)
   {
@@ -1302,9 +1308,11 @@ gchar* s_json_compact(const gchar* json)
 */
   }
 
+  g_free(json_valid);
   return g_string_free(str, FALSE);
 
 err:
+  g_free(json_valid);
   g_string_free(str, TRUE);
   return NULL;
 }

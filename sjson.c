@@ -961,6 +961,14 @@ gchar* s_json_gen_done(SJsonGen* json)
   return NULL;
 }
 
+void s_json_gen_free(SJsonGen* json)
+{
+  g_return_val_if_fail(json != NULL, NULL);
+
+  g_string_free(json->str, TRUE);
+  g_slice_free(SJsonGen, json);
+}
+
 // build
 
 // formats:

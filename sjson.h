@@ -99,6 +99,7 @@ void           s_json_gen_member_null       (SJsonGen* json, const gchar* name);
 void           s_json_gen_member_array      (SJsonGen* json, const gchar* name);
 void           s_json_gen_member_object     (SJsonGen* json, const gchar* name);
 gchar*         s_json_gen_done              (SJsonGen* json);
+void           s_json_gen_free              (SJsonGen* json);
 
 // builder
 

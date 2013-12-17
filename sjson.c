@@ -858,6 +858,16 @@ void s_json_gen_member_build(SJsonGen* json, const gchar* name, const gchar* fmt
   g_free(v);
 }
 
+void s_json_gen_member(SJsonGen* json, const gchar* name)
+{
+  g_return_if_fail(json != NULL);
+  g_return_if_fail(name != NULL);
+
+  s_json_gen_string(json, name);
+  strip_comma(json);
+  g_string_append_c(json->str, ':');
+}
+
 void s_json_gen_member_json(SJsonGen* json, const gchar* name, const gchar* v)
 {
   g_return_if_fail(json != NULL);

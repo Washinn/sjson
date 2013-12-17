@@ -89,6 +89,7 @@ void           s_json_gen_int               (SJsonGen* json, gint64 v);
 void           s_json_gen_double            (SJsonGen* json, gdouble v);
 void           s_json_gen_bool              (SJsonGen* json, gboolean v);
 void           s_json_gen_null              (SJsonGen* json);
+void           s_json_gen_member            (SJsonGen* json, const gchar* name);
 void           s_json_gen_member_json       (SJsonGen* json, const gchar* name, const gchar* v);
 void           s_json_gen_member_build      (SJsonGen* json, const gchar* name, const gchar* fmt, ...);
 void           s_json_gen_member_string     (SJsonGen* json, const gchar* name, const gchar* v);

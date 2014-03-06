@@ -50,6 +50,7 @@ const gchar*   s_json_get_element_first     (const gchar* json);
 const gchar*   s_json_get_element_next      (const gchar* iter);
 const gchar*   s_json_get_element           (const gchar* json, guint index);
 gchar**        s_json_get_elements          (const gchar* json);
+gsize          s_json_get_element_count     (const gchar* json);
 
 const gchar*   s_json_get_member_first      (const gchar* json, const gchar** value);
 const gchar*   s_json_get_member_next       (const gchar** value);

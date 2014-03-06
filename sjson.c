@@ -374,6 +374,19 @@ gchar** s_json_get_elements(const gchar* json)
   return (gchar**)g_ptr_array_free(arr, FALSE);
 }
 
+gsize s_json_get_element_count(const gchar* json)
+{
+  gsize count = 0;
+
+  g_return_val_if_fail(json != NULL, NULL);
+
+  S_JSON_FOREACH_ELEMENT(json, elem)
+    count++;
+  S_JSON_FOREACH_END()
+
+  return count;
+}
+
 const gchar* s_json_get_member_first(const gchar* json, const gchar** value)
 {
   const gchar* key;
